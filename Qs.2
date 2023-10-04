@@ -1,0 +1,43 @@
+Qs.2.Write a blog about objects and its internal representation in Javascript
+
+Understanding JavaScript Objects:
+
+In JavaScript, an object is a collection of key-value pairs where each value can be of any data type, including other objects.
+Objects in JavaScript can represent real-world entities,providing a way to model and organize complex data and functionality.
+
+Objects are defined using curly braces {} and contain properties defined as key-value pairs, where the key is a string (or a symbol in modern JavaScript)
+and the value can be any valid JavaScript data type.
+
+ const person = {
+   name: 'John Doe',
+   age: 30,
+   address: {
+     city: 'New York',
+     country: 'USA'
+   }
+ };
+
+ Internal Representation of Objects:
+
+ The internal representation of JavaScript objects may vary across different JavaScript engines (e.g., V8, SpiderMonkey, JavaScriptCore).
+ However, we can discuss a generalized understanding of how objects are represented.
+
+1.Properties and Values: Each property of an object is stored as a key-value pair. The keys are stored as strings (or symbols), and the values can be any JavaScript data type.
+
+2.Hidden Classes (or Shapes): JavaScript engines often use a mechanism known as "hidden classes" or "shapes" to optimize object property access and memory usage.
+  These hidden classes help define the structure of the object, allowing the engine to optimize property access.
+
+3.Property Descriptors: Each property in an object has associated property descriptors that define its characteristics, such as whether it is writable, enumerable, or configurable. 
+  Property descriptors help determine how the property can be accessed or modified.
+
+4.Prototype Chain: Objects in JavaScript are linked to a prototype object, forming a prototype chain. This allows objects to inherit properties and methods from their prototypes.
+ When a property is accessed on an object, and the property is not found on the object itself, JavaScript looks for it in the object's prototype, and so on, 
+ until it finds the property or reaches the end of the prototype chain.
+
+5.Hash Tables or Maps: Internally, JavaScript engines often use hash tables or similar data structures to store properties and their values efficiently.
+
+6.Memory Management: JavaScript engines manage memory for objects dynamically, allocating and deallocating memory as needed. 
+  This is typically handled by garbage collection algorithms to reclaim memory that is no longer needed.
+
+  Understanding the internal representation of objects provides insights into how JavaScript engines optimize property access and memory usage.
+  By leveraging this understanding, developers can write more efficient and performant code when working with objects in JavaScript.

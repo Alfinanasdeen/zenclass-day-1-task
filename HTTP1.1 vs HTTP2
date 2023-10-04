@@ -1,0 +1,32 @@
+Qs.1.Write a blog on Difference between HTTP1.1 vs HTTP2
+
+HTTP (Hypertext Transfer Protocol)
+
+HTTP/1.1
+
+1.Multiple Requests: HTTP/1.1 requires multiple TCP connections for concurrent requests. Each resource (image, CSS, JavaScript) necessitates a new connection, 
+  leading to delays and inefficiencies.
+
+2.Header Redundancy: With each request, a significant portion of the headers is repeated, causing unnecessary overhead. This redundancy includes cookies, 
+  authentication, and other metadata.
+
+3.Head-of-Line Blocking: The queuing mechanism of HTTP/1.1 leads to a phenomenon known as head-of-line blocking, where a slow or large request can block
+  subsequent requests in the queue.
+
+4.No Prioritization: HTTP/1.1 lacks the ability to prioritize requests, meaning that all requests are treated equally, irrespective of their 
+  importance or relevance to the user.
+
+ HTTP/2
+
+1.Multiplexing: HTTP/2 allows multiple requests and responses to be multiplexed over a single TCP connection. This eliminates the need for 
+  multiple connections and reduces latency significantly.
+
+2.Header Compression: HTTP/2 uses header compression, which significantly reduces redundant header data, resulting in a more efficient use of bandwidth.
+
+3.Server Push: With HTTP/2, servers can proactively send additional resources to the client, even before they are requested. This is known as server push, 
+  enhancing performance by reducing the need for subsequent requests.
+
+4.Stream Prioritization: HTTP/2 enables stream prioritization, allowing developers to specify the importance of different resources. This ensures that 
+  critical resources are fetched first, enhancing user experience.
+
+5.Binary Protocol: HTTP/2 uses a binary protocol, making it more efficient for parsing and processing, in comparison to the plain text-based protocol of HTTP/1.1.
